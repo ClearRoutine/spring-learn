@@ -12,6 +12,7 @@
     <modules>
         <module>spring-xml</module>
         <module>spring-annotation</module>
+        <module>spring-annotation-bean-config</module>
     </modules>
 
     <properties>
