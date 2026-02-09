@@ -13,6 +13,7 @@
         <module>spring-xml</module>
         <module>spring-annotation</module>
         <module>spring-annotation-bean-config</module>
+        <module>spring-xml-web</module>
     </modules>
 
     <properties>
