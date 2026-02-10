@@ -18,6 +18,7 @@
         <module>spring-xml-web-multi-config</module>
         <module>spring-xml-web-import-config</module>
         <module>spring-bean-get-example</module>
+        <module>spring-manual-bean-registration</module>
     </modules>
 
     <properties>
