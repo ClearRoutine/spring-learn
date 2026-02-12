@@ -25,7 +25,7 @@
         <module>spring-bean-id-name-alias</module>
         <module>spring-bean-inner-bean</module>
         <module>spring-bean-autowiring</module>
-        <module>spring-bean-factory-method</module>
+        <module>spring-bean-static-factory</module>
         <module>spring-bean-constructor-injection</module>
     </modules>
 

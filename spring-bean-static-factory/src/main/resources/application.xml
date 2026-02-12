@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 无参静态工厂方法 -->
+    <bean id="userFactory"
+          class="com.tt.UserFactory"
+          factory-method="createInstance"/>
+
+    <!--
+        带参静态工厂方法
+        constructor-arg 作为 factory-method 的参数传入
+        容器根据参数数量和类型匹配 createInstance(String version)
+    -->
+    <bean id="userFactoryV2"
+          class="com.tt.UserFactory"
+          factory-method="createInstance">
+        <constructor-arg value="2.0"/>
+    </bean>
+
+</beans>

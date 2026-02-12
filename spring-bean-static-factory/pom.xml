@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-bean-factory-method</artifactId>
+    <artifactId>spring-bean-static-factory</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-bean-factory-method</name>
+    <name>spring-bean-static-factory</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
