@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 构造器注入：使用 constructor-arg，Spring 调用带参构造方法创建对象时传入依赖 -->
+    <bean id="orderRepository" class="com.tt.repository.OrderRepository"/>
+
+    <bean id="orderService" class="com.tt.service.OrderService">
+        <constructor-arg ref="orderRepository"/>
+    </bean>
+
+    <bean id="orderController" class="com.tt.controller.OrderController">
+        <constructor-arg ref="orderService"/>
+    </bean>
+
+</beans>
