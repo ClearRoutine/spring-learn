@@ -22,6 +22,7 @@
         <module>spring-bean-override-default</module>
         <module>spring-bean-override-disabled</module>
         <module>spring-bean-override-bean-priority</module>
+        <module>spring-bean-id-name-alias</module>
     </modules>
 
     <properties>

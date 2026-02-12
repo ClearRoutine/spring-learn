@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        id: 主标识符，只能指定一个
+        name: 别名，可以指定多个，用逗号、分号或空格分隔
+        以下配置表示：
+        - 主名: product
+        - 别名: productAlias, myProduct
+    -->
+    <bean id="product" name="productAlias, myProduct" class="com.tt.product.Product"/>
+
+</beans>
