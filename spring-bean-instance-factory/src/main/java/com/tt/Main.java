@@ -1,14 +1,13 @@
 package com.tt;
 
-import com.tt.user.User;
+import com.tt.order.Order;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * 静态工厂方法创建 Bean 演示
+ * 实例工厂方法创建 Bean 演示
  *
- * 1. 无参：createInstance()
- * 2. 带参：createInstance(String version)，通过 constructor-arg 传入参数
+ * 工厂类先实例化为 Bean，再通过 factory-bean + factory-method 调用其实例方法
  */
 public class Main {
 
@@ -16,12 +15,12 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
 
-        User user = context.getBean("user", User.class);
+        Order order = context.getBean("order", Order.class);
         System.out.print("无参: ");
-        user.handle();
+        order.handle();
 
-        User userV2 = context.getBean("userV2", User.class);
+        Order orderV2 = context.getBean("orderV2", Order.class);
         System.out.print("带参: ");
-        userV2.handle();
+        orderV2.handle();
     }
 }

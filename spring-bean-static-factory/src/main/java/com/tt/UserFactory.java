@@ -1,5 +1,7 @@
 package com.tt;
 
+import com.tt.user.User;
+
 /**
  * 静态工厂类
  * Spring 调用静态方法，返回值作为 Bean 注册
@@ -7,23 +9,16 @@ package com.tt;
  */
 public class UserFactory {
 
-    private final String version;
-
-    private UserFactory(String version) {
-        this.version = version;
+    private UserFactory() {
     }
 
     /** 无参工厂方法 */
-    public static UserFactory createInstance() {
-        return new UserFactory("default");
+    public static User createInstance() {
+        return new User("default");
     }
 
     /** 带参工厂方法：Spring 根据 constructor-arg 匹配此重载 */
-    public static UserFactory createInstance(String version) {
-        return new UserFactory(version);
-    }
-
-    public void handle() {
-        System.out.println("UserFactory 处理请求 [version=" + version + "]");
+    public static User createInstance(String version) {
+        return new User(version);
     }
 }

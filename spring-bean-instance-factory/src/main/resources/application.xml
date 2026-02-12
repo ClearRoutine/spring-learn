@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 1. 先定义工厂 Bean -->
+    <bean id="orderFactory" class="com.tt.OrderFactory"/>
+
+    <!-- 2. 无参实例工厂方法：factory-bean 指定工厂，factory-method 指定实例方法 -->
+    <bean id="order"
+          factory-bean="orderFactory"
+          factory-method="createInstance"/>
+
+    <!-- 3. 带参实例工厂方法 -->
+    <bean id="orderV2"
+          factory-bean="orderFactory"
+          factory-method="createInstance">
+        <constructor-arg value="ORDER-002"/>
+    </bean>
+
+</beans>
