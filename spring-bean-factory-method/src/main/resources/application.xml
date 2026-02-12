@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        静态工厂方法创建 Bean
+        class: 工厂类
+        factory-method: 静态方法名
+        Spring 调用 UserFactory.createService()，返回值作为 userService Bean 注册
+    -->
+    <bean id="userService"
+          class="com.tt.UserFactory"
+          factory-method="createService"/>
+
+</beans>
