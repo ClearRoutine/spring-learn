@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 不指定 id/name，Spring 自动生成标识；autowire="byType" 按类型自动注入 -->
+    <bean class="com.tt.repository.OrderRepository"/>
+
+    <bean class="com.tt.service.OrderService" autowire="byType"/>
+
+    <bean class="com.tt.controller.OrderController" autowire="byType"/>
+
+</beans>

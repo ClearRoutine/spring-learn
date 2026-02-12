@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        内部 Bean 示例
+        OrderRepository 作为内部 Bean 定义在 <property> 内，没有 id 也没有 name
+        内部 Bean 只供当前 OrderService 使用，无法被其他 Bean 引用，也无法通过 getBean() 获取
+        因此不需要、也无法指定名称
+    -->
+    <bean id="orderService" class="com.tt.service.OrderService">
+        <property name="orderRepository">
+            <bean class="com.tt.repository.OrderRepository"/>
+        </property>
+    </bean>
+
+    <bean id="orderController" class="com.tt.controller.OrderController">
+        <property name="orderService" ref="orderService"/>
+    </bean>
+
+</beans>

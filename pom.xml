@@ -23,6 +23,8 @@
         <module>spring-bean-override-disabled</module>
         <module>spring-bean-override-bean-priority</module>
         <module>spring-bean-id-name-alias</module>
+        <module>spring-bean-inner-bean</module>
+        <module>spring-bean-autowiring</module>
     </modules>
 
     <properties>
