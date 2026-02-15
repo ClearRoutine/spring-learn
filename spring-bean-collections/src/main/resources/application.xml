@@ -5,10 +5,6 @@
         http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myDataSource" class="com.tt.DataSource">
-        <constructor-arg value="main-db"/>
-    </bean>
-
     <bean id="complexObject" class="com.tt.ComplexObject">
         <!-- 1. props → Properties -->
         <property name="adminEmails">
@@ -22,8 +18,8 @@
         <!-- 2. list → List -->
         <property name="someList">
             <list>
-                <value>a list element followed by a reference</value>
-                <ref bean="myDataSource"/>
+                <value>first</value>
+                <value>second</value>
             </list>
         </property>
 
@@ -31,7 +27,7 @@
         <property name="someMap">
             <map>
                 <entry key="an entry" value="just some string"/>
-                <entry key="a ref" value-ref="myDataSource"/>
+                <entry key="another" value="another value"/>
             </map>
         </property>
 
@@ -39,11 +35,11 @@
         <property name="someSet">
             <set>
                 <value>just some string</value>
-                <ref bean="myDataSource"/>
+                <value>another element</value>
             </set>
         </property>
 
-        <!-- 5. 复杂 Map：value 可为 list、ref、null -->
+        <!-- 5. 复杂 Map：value 可为 list、null -->
         <property name="complexMap">
             <map>
                 <entry key="tags">
@@ -53,14 +49,13 @@
                         <value>xml</value>
                     </list>
                 </entry>
-                <entry key="dataSource" value-ref="myDataSource"/>
                 <entry key="optional">
                     <null/>
                 </entry>
             </map>
         </property>
 
-        <!-- 6. 复杂 List：元素可为 map、bean、ref -->
+        <!-- 6. 复杂 List：元素可为 map -->
         <property name="complexList">
             <list>
                 <map>
@@ -71,8 +66,16 @@
                     <entry key="name" value="Bob"/>
                     <entry key="age" value="30"/>
                 </map>
-                <ref bean="myDataSource"/>
             </list>
+        </property>
+
+        <!-- 7. 强类型 Map<String, Float>，XML 字符串自动转为 Float -->
+        <property name="accounts">
+            <map>
+                <entry key="one" value="9.99"/>
+                <entry key="two" value="2.75"/>
+                <entry key="six" value="3.99"/>
+            </map>
         </property>
     </bean>
 

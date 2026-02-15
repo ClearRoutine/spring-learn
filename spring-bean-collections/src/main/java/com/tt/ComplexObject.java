@@ -16,6 +16,7 @@ public class ComplexObject {
     private Set<Object> someSet;
     private Map<String, Object> complexMap;   // 复杂 Map：value 为 list
     private List<Object> complexList;          // 复杂 List：元素为 map
+    private Map<String, Float> accounts;        // 强类型 Map，XML 字符串 → Float 自动转换
 
     public void setAdminEmails(Properties adminEmails) {
         this.adminEmails = adminEmails;
@@ -41,6 +42,10 @@ public class ComplexObject {
         this.complexList = complexList;
     }
 
+    public void setAccounts(Map<String, Float> accounts) {
+        this.accounts = accounts;
+    }
+
     public Properties getAdminEmails() {
         return adminEmails;
     }
@@ -63,5 +68,9 @@ public class ComplexObject {
 
     public List<Object> getComplexList() {
         return complexList;
+    }
+
+    public Map<String, Float> getAccounts() {
+        return accounts;
     }
 }

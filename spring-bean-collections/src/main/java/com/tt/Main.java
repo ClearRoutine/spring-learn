@@ -35,10 +35,15 @@ public class Main {
         obj.getComplexMap().forEach((k, v) -> System.out.println("  " + k + " = " + v));
         System.out.println();
 
-        System.out.println("=== 6. 复杂 List（元素为 map、ref）===");
+        System.out.println("=== 6. 复杂 List（元素为 map）===");
         for (int i = 0; i < obj.getComplexList().size(); i++) {
             Object item = obj.getComplexList().get(i);
             System.out.println("  [" + i + "] " + item);
         }
+        System.out.println();
+
+        System.out.println("=== 7. 强类型 Map<String, Float>（XML 字符串 → Float 自动转换）===");
+        obj.getAccounts().forEach((k, v) ->
+                System.out.println("  " + k + " = " + v + " (" + v.getClass().getSimpleName() + ")"));
     }
 }
