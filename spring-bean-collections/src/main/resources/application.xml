@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myDataSource" class="com.tt.DataSource">
+        <constructor-arg value="main-db"/>
+    </bean>
+
+    <bean id="complexObject" class="com.tt.ComplexObject">
+        <!-- 1. props → Properties -->
+        <property name="adminEmails">
+            <props>
+                <prop key="administrator">administrator@example.org</prop>
+                <prop key="support">support@example.org</prop>
+                <prop key="development">development@example.org</prop>
+            </props>
+        </property>
+
+        <!-- 2. list → List -->
+        <property name="someList">
+            <list>
+                <value>a list element followed by a reference</value>
+                <ref bean="myDataSource"/>
+            </list>
+        </property>
+
+        <!-- 3. map → Map -->
+        <property name="someMap">
+            <map>
+                <entry key="an entry" value="just some string"/>
+                <entry key="a ref" value-ref="myDataSource"/>
+            </map>
+        </property>
+
+        <!-- 4. set → Set -->
+        <property name="someSet">
+            <set>
+                <value>just some string</value>
+                <ref bean="myDataSource"/>
+            </set>
+        </property>
+
+        <!-- 5. 复杂 Map：value 可为 list、ref、null -->
+        <property name="complexMap">
+            <map>
+                <entry key="tags">
+                    <list>
+                        <value>java</value>
+                        <value>spring</value>
+                        <value>xml</value>
+                    </list>
+                </entry>
+                <entry key="dataSource" value-ref="myDataSource"/>
+                <entry key="optional">
+                    <null/>
+                </entry>
+            </map>
+        </property>
+
+        <!-- 6. 复杂 List：元素可为 map、bean、ref -->
+        <property name="complexList">
+            <list>
+                <map>
+                    <entry key="name" value="Alice"/>
+                    <entry key="age" value="25"/>
+                </map>
+                <map>
+                    <entry key="name" value="Bob"/>
+                    <entry key="age" value="30"/>
+                </map>
+                <ref bean="myDataSource"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
