@@ -16,5 +16,9 @@ public class Main {
 
         System.out.println("常规 property: " + userByProperty);
         System.out.println("p-namespace:   " + user);
+        System.out.println();
+
+        User userWithManager = context.getBean("userWithManager", User.class);
+        System.out.println("p:manager-ref: " + userWithManager);
     }
 }

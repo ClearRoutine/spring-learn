@@ -32,6 +32,7 @@
         <module>spring-bean-p-namespace</module>
         <module>spring-bean-ref</module>
         <module>spring-bean-collections</module>
+        <module>spring-bean-null-and-empty</module>
     </modules>
 
     <properties>

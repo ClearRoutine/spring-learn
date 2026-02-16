@@ -29,6 +29,8 @@
     <file url="file://$PROJECT_DIR$/spring-bean-inner-bean/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-bean-instance-factory/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-bean-instance-factory/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-bean-null-and-empty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-bean-null-and-empty/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-bean-override-bean-priority/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-bean-override-bean-priority/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-bean-override-default/src/main/java" charset="UTF-8" />

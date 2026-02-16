@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- value=""：空字符串，email 是真实存在的 String 对象，length() = 0 -->
+    <bean id="beanWithEmpty" class="com.tt.ExampleBean">
+        <property name="email" value=""/>
+    </bean>
+
+    <!-- <null/>：Java null，email 没有对象，length() 会 NullPointerException -->
+    <bean id="beanWithNull" class="com.tt.ExampleBean">
+        <property name="email">
+            <null/>
+        </property>
+    </bean>
+
+</beans>

@@ -19,4 +19,9 @@
           p:age="30"
           p:email="lisi@example.com"/>
 
+    <!-- p:xxx-ref：注入对象引用，等价于 <property name="xxx" ref="beanId"/> -->
+    <bean id="manager" class="com.tt.User" p:name="管理员" p:age="35" p:email="admin@example.com"/>
+    <bean id="userWithManager" class="com.tt.User"
+          p:name="王五" p:age="28" p:email="wangwu@example.com" p:manager-ref="manager"/>
+
 </beans>

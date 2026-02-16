@@ -3,8 +3,6 @@ package com.tt;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.Map;
-
 /**
  * 演示 props、list、map、set 四种集合注入
  * 以及 map/list 的复杂嵌套（value 可为 bean、ref、list、map 等）
