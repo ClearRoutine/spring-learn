@@ -103,7 +103,7 @@
 
 两种方式的核心区别就在于：依赖是通过 `set` 方法赋值，还是在对象创建时通过构造方法一次性注入完成。
 
-[使用构造函数创建 Bean。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/gpbbgkqrg5z1xxsn)
+[使用构造函数创建 Bean](../../example/bean-constructor-create.md)
 
 ### 通过静态工厂方法实例化
 **用静态工厂方法（static factory method）创建 Bean**，也是 `Spring` 提供的另一种实例化方式，比直接构造器更灵活。

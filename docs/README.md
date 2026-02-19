@@ -24,6 +24,7 @@
 - [Spring 的默认 Bean 覆盖行为](example/spring-bean-override-default.md)
 - [@Bean 注解进行强行覆盖](example/bean-annotation-force-override.md)
 - [bean 别名](example/bean-alias.md)
+- [使用构造函数创建 Bean](example/bean-constructor-create.md)
 
 ### 配置 (Config)
 
