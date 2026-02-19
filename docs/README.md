@@ -15,6 +15,7 @@
 - [三种配置的编写方式](example/three-config-approaches.md)
 - [XML 配置 + web.xml](example/xml-config-web-xml.md)
 - [注解配置 + web.xml](example/annotation-config-web-xml.md)
+- [多模块 XML 配置](example/multi-module-xml-config.md)
 
 ### 配置 (Config)
 
