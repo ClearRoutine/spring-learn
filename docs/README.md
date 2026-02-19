@@ -18,6 +18,7 @@
 ### 配置 (Config)
 
 - [IDEA 如何创建多模块项目](config/idea-multi-module-project.md)
+- [多模块项目如何配置 Tomcat](config/multi-module-tomcat-config.md)
 
 ---
 

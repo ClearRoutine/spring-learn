@@ -2,7 +2,7 @@
 
 `Spring` 提供了一个被称为“**总控制中心**”的接口 —— **ApplicationContext**。从本质上讲，它本身就是 **Spring 的 IoC 容器**。
 
-你不需要自己去 `new` 对象，对象的创建全部交给 `ApplicationContext` 来完成；它不仅负责**创建对象（bean）**，还会 **给对象设置属性、注入依赖**，并且把对象之间的关系提前“接好”。比如 **A 依赖 B，B 又依赖 C**，这些关系都会由它统一管理和装配完成。
+你不需要自己去 `new` 对象，对象的创建全部交给 `ApplicationContext` 来完成；它不仅负责 **创建对象（**`**bean**`**）**，还会 **给对象设置属性、注入依赖**，并且把对象之间的关系提前“接好”。比如 **A 依赖 B，B 又依赖 C**，这些关系都会由它统一管理和装配完成。
 
 一句话总结：**ApplicationContext 就是 Spring 的“对象工厂 + 调度中心”**，它负责创建 `bean`、配置 `bean`，并把各个 `bean` 之间的依赖关系完整地组织起来。
 
@@ -35,7 +35,7 @@
 
 **ClassPathXmlApplicationContext**（`XML` 方式，偏老的传统方案），如果你是通过 **XML 文件** 来配置 `Spring`，那么就使用这个类从 `classpath` 中加载对应的 `XML` 配置文件。
 
-[三种配置的编写方式](../../example/three-config-approaches.md)
+[三种配置的编写方式。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/ta91r6eno8i60ii9)
 
 在大多数应用场景下，其实**不需要手动编写** `AnnotationConfigApplicationContext`、`ClassPathXmlApplicationContext` 这一类显式实例化代码来创建 `Spring IOC` 容器。
 
@@ -46,7 +46,7 @@
 
 而如果使用的是 **Spring Boot**，情况就更简单了，通常**连 `web.xml` 都不需要了**，基本上采用的就是**纯注解的开发方式**，`Spring Boot` 会在启动阶段自动帮你完成 `IOC` 容器和 `Web` 环境的初始化。
 
-[XML 配置 + web.xml](../../example/xml-config-web-xml.md)
+[XML 配置 + web.xml。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/zkk420ozdomwr2qb)
 
 [注解配置 + web.xml。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/iz9gqp0dwl5e8m1o)
 
@@ -56,7 +56,7 @@
 
 而实体类（`Entity`）一般不会交由 `Spring` 容器管理，因为它们本质上只是**数据的载体**，用于描述业务数据结构，本身不承载业务行为，也不直接参与业务逻辑的执行。将实体类纳入 `Spring` 管理不仅收益不大，反而可能增加理解和维护成本。
 
-# 基于 XML 的配置元数据组合
+## 基于 XML 的配置元数据组合
 
 项目规模变大后，如果把所有配置都堆在一个文件里，维护和排查问题会变得非常困难。为了解决这个问题，可以将 `XML` 中的 `Bean` 定义拆分到多个 `XML` 文件中。每个文件对应一个逻辑层或功能模块，结构更清晰，更容易维护和查找相关配置，团队协作时冲突更少、效率更高。
 
@@ -82,7 +82,8 @@ application.xml (主配置)
 
 [多模块 XML 和主配置文件。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/ybbetiuzw8hxm3fi)
 
-# 使用容器
+## 使用容器
+
 `ApplicationContext` 中可以存放各种各样的对象，通过调用 `getBean` 方法即可获取对应的 `Bean` 实例。获取 `Bean` 的方式有多种，具体可以参考下面的代码示例。
 
 [使用容器。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/zrtu79y3aovvxxvv)

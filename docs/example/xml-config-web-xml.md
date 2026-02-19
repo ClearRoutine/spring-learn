@@ -21,8 +21,6 @@
 
 这里的项目只能打成 **WAR 包**，而 `WAR` 包本身是**无法独立运行的**，必须依赖外部的 `Web` 容器才能启动，比如 `Tomcat`。原因在于 **Spring 本身只提供了 IOC 和 AOP 等核心功能，并不内置 Web 容器（如 Tomcat）**，因此项目只能以 `WAR` 形式部署到外部容器中运行。
 
-[多模块项目如何配置 Tomcat。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/apukd055htx9bpq9)
-
 ## Servlet
 
 ```java
@@ -160,4 +158,4 @@ public class UserServlet extends HttpServlet {
 
 当客户端请求匹配到该路径时，后端就会根据映射关系，调用对应的 `Servlet`，并执行其中的处理逻辑。
 
-[多模块项目如何配置 Tomcat。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/apukd055htx9bpq9)
+[多模块项目如何配置 Tomcat](https://www.yuque.com/diqiyexu-vgtwd/kgih55/apukd055htx9bpq9)
