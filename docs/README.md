@@ -19,6 +19,7 @@
 - [多模块 XML 配置](example/multi-module-xml-config.md)
 - [多模块 XML 和主配置文件](example/multi-module-xml-and-main-config.md)
 - [使用容器](example/using-container.md)
+- [动态加载 bean](example/dynamic-load-bean.md)
 
 ### 配置 (Config)
 

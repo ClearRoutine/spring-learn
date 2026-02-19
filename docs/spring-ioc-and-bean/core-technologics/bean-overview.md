@@ -19,7 +19,7 @@
 + **这个 Bean 是用哪个类创建的？**`Spring` 至少得搞清楚一件事，“你到底是想让我 `new` 哪个类？”
 + 然后是一些**行为相关的配置**，也就是这个 `Bean` 在容器里“怎么活”，是单例（`singleton`）还是多例（`prototype`）？要不要执行初始化回调（`@PostConstruct`）？容器关闭时要不要执行销毁回调（`@PreDestroy`）？
 + 再然后，是**依赖关系**。比如 `OrderService` 类里面有一个私有属性 `private UserService userService;`，这里面的 `UserService` 对 `OrderService` 来说，就是依赖（`dependency`）、协作者（`collaborator`），`Spring` 需要记住一件关键的事，“我创建 `OrderService` 之前，必须先把 `UserService` 准备好。”
-+ 最后，还有一些**业务相关的配置值**，比如：连接池大小、最大连接数、超时时间。这些看起来不像对象本身，但它们同样属于 `Bean` 的一部分 —— 都是这个 `Bean` 的**“出生配置”**。
++ 最后，还有一些**业务相关的配置值**，比如：连接池大小、最大连接数、超时时间。这些看起来不像对象本身，但它们同样属于 `Bean` 的一部分 —— 都是这个 `Bean` 的“出生配置”。
 
 所以总结一下，**Bean 并不神秘，就是普通 Java 对象；神秘的是 Spring 在背后用 **`BeanDefinition`**，把关于它的一切都提前记了下来，然后再按这份“说明书”去把对象完整、正确地造出来并管好。**
 
