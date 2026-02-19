@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 链式属性：fred.bob.sammy 等价于 getFred().getBob().setSammy("123") -->
+    <!-- 前置对象不能为 null，需先注入 bob、fred -->
+    <bean id="bob" class="com.tt.Bob"/>
+    <bean id="fred" class="com.tt.Fred">
+        <property name="bob" ref="bob"/>
+    </bean>
+    <bean id="something" class="com.tt.ThingOne">
+        <property name="fred" ref="fred"/>
+        <property name="fred.bob.sammy" value="123"/>
+    </bean>
+
+</beans>
