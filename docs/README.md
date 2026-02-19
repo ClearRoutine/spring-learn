@@ -21,11 +21,13 @@
 - [使用容器](example/using-container.md)
 - [动态加载 bean](example/dynamic-load-bean.md)
 - [禁止 Spring 的 Bean 覆盖行为](example/spring-bean-override-disabled.md)
+- [Spring 的默认 Bean 覆盖行为](example/spring-bean-override-default.md)
 
 ### 配置 (Config)
 
 - [IDEA 如何创建多模块项目](config/idea-multi-module-project.md)
 - [多模块项目如何配置 Tomcat](config/multi-module-tomcat-config.md)
+- [日志配置](config/log-config.md)
 
 ---
 
