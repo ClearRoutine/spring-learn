@@ -34,6 +34,7 @@
 - [使用实例工厂方法创建 Bean](example/bean-instance-factory-create.md)
 - [使用 name 进行匹配](example/constructor-arg-name-match.md)
 - [p-namespace](example/p-namespace.md)
+- [ref](example/ref.md)
 
 ### 配置 (Config)
 

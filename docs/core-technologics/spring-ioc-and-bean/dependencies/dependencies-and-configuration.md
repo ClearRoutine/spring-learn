@@ -116,7 +116,7 @@ orderService.userService = userService对象
 
 如果 `B` 是单例（`singleton`），可能在容器启动时就已经创建好了，`Spring` 会直接拿现成的实例使用。
 
-[ref。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/btsntkryrvlzn19n)
+[ref](../../../example/ref.md)
 
 之前我们讲过，一个项目里是可以拆分成多个 `XML` 配置文件的。这些配置文件可以分别定义各自的 `Bean`，只要最后把它们**一起加载到同一个 Spring 容器中**，它们之间就可以互相引用。
 
