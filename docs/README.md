@@ -11,6 +11,10 @@
 - [容器概述](core-technologics/spring-ioc-and-bean/container-overview.md)
 - [Bean 概述](core-technologics/spring-ioc-and-bean/bean-overview.md)
 
+##### 依赖注入 (Dependencies)
+
+- [依赖注入](core-technologics/spring-ioc-and-bean/dependencies/dependency-injection.md)
+
 ### 示例 (Example)
 
 - [三种配置的编写方式](example/three-config-approaches.md)
