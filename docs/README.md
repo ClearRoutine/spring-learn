@@ -33,6 +33,7 @@
 - [使用静态工厂方法创建 Bean](example/bean-static-factory-create.md)
 - [使用实例工厂方法创建 Bean](example/bean-instance-factory-create.md)
 - [使用 name 进行匹配](example/constructor-arg-name-match.md)
+- [p-namespace](example/p-namespace.md)
 
 ### 配置 (Config)
 

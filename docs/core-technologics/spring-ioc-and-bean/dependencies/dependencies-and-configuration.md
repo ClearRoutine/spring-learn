@@ -79,7 +79,7 @@ public class User {
 
 如果你想通过 `p-namespace` 注入一个**对象类型的属性**（而不是基本类型或字符串），就必须使用 `p:spouse-ref`，而不能简单写成 `p:spouse`。
 
-[p-namespace。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/fu8t829p27t59zg6)
+[p-namespace](../../../example/p-namespace.md)
 
 # <ref>
 
