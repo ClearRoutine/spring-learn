@@ -8,6 +8,10 @@
 
 - [容器概述](core-technologics/container-overview.md)
 
+### 示例 (Example)
+
+- [三种配置的编写方式](example/three-config-approaches.md)
+
 ---
 
 如发现文档有误或需要改进，欢迎在抖音群讨论，或直接提 issues（在 GitHub 仓库的 Issues 页面反馈问题或建议）。
