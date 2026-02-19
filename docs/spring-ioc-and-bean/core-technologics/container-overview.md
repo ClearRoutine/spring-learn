@@ -87,6 +87,6 @@ application.xml (主配置)
 
 `ApplicationContext` 中可以存放各种各样的对象，通过调用 `getBean` 方法即可获取对应的 `Bean` 实例。获取 `Bean` 的方式有多种，具体可以参考下面的代码示例。
 
-[使用容器。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/zrtu79y3aovvxxvv)
+[使用容器](../../example/using-container.md)
 
 虽然 `Spring` 允许你直接从容器中获取 `bean`，但理想情况下，代码不应该直接调用它。`Spring` 的核心理念是 **依赖注入（DI）**—— 你的类无需自己去“查找”对象，`Spring` 会自动帮你注入依赖。比如，你可以通过注解（如 `@Autowired`）直接获取所需的 `bean`，这样代码无需依赖 `Spring API`，既更干净，也更易测试，实现了更好的解耦。
