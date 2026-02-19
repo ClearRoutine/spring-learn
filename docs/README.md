@@ -34,6 +34,8 @@
 - [使用实例工厂方法创建 Bean](example/bean-instance-factory-create.md)
 - [使用 name 进行匹配](example/constructor-arg-name-match.md)
 - [p-namespace](example/p-namespace.md)
+- [c-namespace](example/c-namespace.md)
+- [复合属性名](example/property-path.md)
 - [ref](example/ref.md)
 - [内部 Bean](example/inner-bean.md)
 - [集合注入](example/collections-injection.md)
