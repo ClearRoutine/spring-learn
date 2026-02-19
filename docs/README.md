@@ -37,6 +37,7 @@
 - [ref](example/ref.md)
 - [内部 Bean](example/inner-bean.md)
 - [集合注入](example/collections-injection.md)
+- [空字符串和 null 的注入](example/null-and-empty-injection.md)
 
 ### 配置 (Config)
 

@@ -260,7 +260,7 @@ public class SomeClass {
 
 `Spring` 会理解成 `exampleBean.setEmail(null);`，也就是说，`email` 根本没有对象，是 `Java` 的 `null`，访问 `email.length()` 会直接抛出 `NullPointerException`。
 
-[空字符串和 null 的注入。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/sdyz8idsv60vetup)
+[空字符串和 null 的注入](../../../example/null-and-empty-injection.md)
 
 # c-namespace
 
