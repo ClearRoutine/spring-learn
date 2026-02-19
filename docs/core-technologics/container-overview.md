@@ -33,7 +33,7 @@
 
 **ClassPathXmlApplicationContext**（`XML` 方式，偏老的传统方案），如果你是通过 **XML 文件** 来配置 `Spring`，那么就使用这个类从 `classpath` 中加载对应的 `XML` 配置文件。
 
-[三种配置的编写方式。](https://www.yuque.com/diqiyexu-vgtwd/kgih55/ta91r6eno8i60ii9)
+[三种配置的编写方式](../example/three-config-approaches.md)
 
 在大多数应用场景下，其实**不需要手动编写** `AnnotationConfigApplicationContext`、`ClassPathXmlApplicationContext` 这一类显式实例化代码来创建 `Spring IOC` 容器。
 
